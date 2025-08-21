@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ListaInteligente" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ea-gb-opM">
+                                <rect key="frame" x="100" y="118" width="193" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPc-ZH-DsZ">
+                                <rect key="frame" x="154" y="160" width="85" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Mostrar"/>
+                                <connections>
+                                    <action selector="botaoClicado:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IEV-G6-L0Y"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RE8-ir-Wkb">
+                                <rect key="frame" x="16" y="229" width="361" height="555"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RE8-ir-Wkb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Las-rI-24p"/>
+                            <constraint firstItem="cPc-ZH-DsZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="155" id="O75-R9-Kfd"/>
+                            <constraint firstItem="RE8-ir-Wkb" firstAttribute="top" secondItem="cPc-ZH-DsZ" secondAttribute="bottom" constant="34" id="POa-kU-kyr"/>
+                            <constraint firstItem="1Ea-gb-opM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Q12-hH-bez"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cPc-ZH-DsZ" secondAttribute="trailing" constant="155" id="RHI-ld-N6P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cPc-ZH-DsZ" secondAttribute="trailing" constant="154" id="Rin-I7-U2n"/>
+                            <constraint firstItem="RE8-ir-Wkb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="XdE-7G-eHn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Ea-gb-opM" secondAttribute="trailing" constant="100" id="eQp-5A-hIO"/>
+                            <constraint firstItem="1Ea-gb-opM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="fJ5-Im-zU2"/>
+                            <constraint firstItem="cPc-ZH-DsZ" firstAttribute="top" secondItem="1Ea-gb-opM" secondAttribute="bottom" constant="8" id="gRD-jX-1Fi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RE8-ir-Wkb" secondAttribute="trailing" constant="16" id="isz-3X-LVm"/>
+                            <constraint firstItem="cPc-ZH-DsZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="154" id="p0i-UP-kPa"/>
+                            <constraint firstItem="cPc-ZH-DsZ" firstAttribute="top" secondItem="1Ea-gb-opM" secondAttribute="bottom" constant="8" id="rIn-Si-gkb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="campoTexto" destination="1Ea-gb-opM" id="wq0-Jv-95y"/>
+                        <outlet property="tabela" destination="RE8-ir-Wkb" id="bH0-6w-5bL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119.84732824427481" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
